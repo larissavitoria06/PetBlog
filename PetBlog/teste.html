@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Widget Notícias</title>
+ <style>
+:root{
+--accent:#e76f51;
+--muted:#9aa3a8;
+--bg:#ffffff;
+--card:#fbfbfb;
+--text:#1b1b1b;
+--max-width:1200px;
+}
+
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+
+body{
+font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+line-height:1.5;
+background:var(--bg);
+color:var(--text);
+padding:24px;
+}
+
+
+/* Branding/Header */
+.brand{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+
+.logo{
+width:46px;
+height:46px;
+background:linear-gradient(135deg,#7ad9ff,#c7f4ff);
+border-radius:10px;
+display:flex;
+align-items:center;
+justify-content:center;
+color:#ffffff;
+font-weight:700;
+}
+
+
+.container{
+max-width:var(--max-width);
+margin:28px auto;
+padding:0 20px;
+}
+
+
+header{
+border-bottom:1px solid var(--muted);
+margin-bottom:20px;
+padding-bottom:10px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+
+.btn{
+padding:8px 12px;
+border-radius:8px;
+border:none;
+background:#80e4fd;
+color:#ffffff;
+font-weight:700;
+cursor:pointer;
+transition:background 0.2s ease;
+}
+.btn:hover{background:#1bcdfa}
+
+.comments {
+  margin-top: 30px;
+  padding: 16px;
+  background: var(--card);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.comments h2 {
+  font-size: 18px;
+  margin-bottom: 14px;
+  color: var(--accent);
+}
+
+.comment-list {
+  margin-bottom: 20px;
+}
+
+.comment {
+  background: #f9f9f9;
+  padding: 10px 12px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.comment strong {
+  color: var(--accent);
+}
+
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.comment-form input,
+.comment-form textarea {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid var(--muted);
+  font-size: 14px;
+  width: 100%;
+}
+
+.comment-form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+
+/* News widget */
+.news-widget{width:360px; border-radius:8px; background:var(--card); padding:14px; box-shadow:0 2px 8px rgba(0,0,0,0.06)}
+
+
+.news-header{display:flex; align-items:center; gap:10px; margin-bottom:10px}
+.news-header .dot{width:10px;height:10px;border-radius:50%;background:var(--accent)}
+.news-header h4{margin:0;font-size:13px;letter-spacing:0.6px;color:var(--accent)}
+
+
+.main-news{display:flex; gap:12px; align-items:flex-start; padding:8px 0}
+.main-news img{width:80px;height:60px;object-fit:cover;border-radius:6px}
+.main-news .title{font-weight:700;margin:0;font-size:14px;line-height:1.15}
+.main-news .meta{font-size:12px;color:var(--muted);margin-top:6px}
+
+
+.divider{height:1px;background:linear-gradient(90deg, transparent, rgba(0,0,0,0.06), transparent);margin:8px 0}
+
+
+.news-list{list-style:none;padding:0;margin:0}
+.news-list li{padding:10px 8px;border-left:3px solid transparent;display:flex;align-items:center;gap:10px}
+
+</style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">NA</div>
+        <div>
+          <div style="font-weight:800">Blog NotíciasAgora</div>
+          <div style="font-size:0.85rem;color:var(--muted)">Últimas e principais Posts</div>
+        </div>
+      </div>
+      <nav>
+        <div class="button">
+  <a href="index.html" class="btn">Voltar</a>
+</div>
+      </nav>
+    </header>
+  
+    </div>
+
+    <article class="main-news">
+      <img src="./img/blog.jpg" alt="imagem noticia"/>
+      <div>
+        <h3 class="title">Chefe do Comando Vermelho em MT é preso em praia de Niterói</h3>
+        <div class="meta">Giro de notícias</div>
+      </div>
+    </article>
+
+    <div class="divider" aria-hidden></div>
+
+    <ul class="news-list">
+      <li>
+        <div class="dot-line" aria-hidden></div>
+        <p class="text">SP: trabalhador morre após cair de cúpula e ficar pendurado em prédio</p>
+      </li>
+      <li>
+        <div class="dot-line" aria-hidden></div>
+        <p class="text">Estudo aponta falhas na transparência de emendas e execução de obras</p>
+      </li>
+      <li>
+        <div class="dot-line" aria-hidden></div>
+        <p class="text">'Não estou enxergando nada': mulher fica cega após intoxicação por metanol</p>
+      </li>
+    </ul>
+  </aside>
+  <header></header>
+    <article class="main-news">
+      <img src="./img/blog.jpg" alt="imagem noticia"/>
+      <div>
+        <h3 class="title">Chefe do Comando Vermelho em MT é preso em praia de Niterói</h3>
+        <div class="meta">Giro de notícias</div>
+      </div>
+    </article>
+
+    <div class="divider" aria-hidden></div>
+
+    <ul class="news-list">
+      <li>
+        <div class="dot-line" aria-hidden></div>
+        <p class="text">SP: trabalhador morre após cair de cúpula e ficar pendurado em prédio</p>
+      </li>
+      <li>
+        <div class="dot-line" aria-hidden></div>
+        <p class="text">Estudo aponta falhas na transparência de emendas e execução de obras</p>
+      </li>
+      <li>
+        <div class="dot-line" aria-hidden></div>
+        <p class="text">'Não estou enxergando nada': mulher fica cega após intoxicação por metanol</p>
+      </li>
+    </ul>
+      <header></header>
+  </aside>
+    <article class="main-news">
+      <img src="./img/blog.jpg" alt="imagem noticia"/>
+      <div>
+        <h3 class="title">Chefe do Comando Vermelho em MT é preso em praia de Niterói</h3>
+        <div class="meta">Giro de notícias</div>
+      </div>
+    </article>
+
+    <div class="divider" aria-hidden></div>
+
+    <ul class="news-list">
+      <li>
+        <div class="dot-line" aria-hidden></div>
+        <p class="text">SP: trabalhador morre após cair de cúpula e ficar pendurado em prédio</p>
+      </li>
+      <li>
+        <div class="dot-line" aria-hidden></div>
+        <p class="text">Estudo aponta falhas na transparência de emendas e execução de obras</p>
+      </li>
+      <li>
+        <div class="dot-line" aria-hidden></div>
+        <p class="text">'Não estou enxergando nada': mulher fica cega após intoxicação por metanol</p>
+      </li>
+    </ul>
+  </aside>
+  <header></header> 
+  <!-- Lista de comentários -->
+  <div class="comment-list">
+    <div class="comment">
+      <p><strong>Ana:</strong> Muito interessante essa notícia!</p>
+    </div>
+    <div class="comment">
+      <p><strong>Pedro:</strong> Estou acompanhando de perto esse caso.</p>
+    </div>
+  </div>
+
+  <!-- Formulário para novo comentário -->
+  <form class="comment-form">
+    <label for="name">Nome:</label>
+    <input type="text" id="name" name="name" placeholder="Digite seu nome" required>
+
+    <label for="message">Comentário:</label>
+    <textarea id="message" name="message" placeholder="Escreva seu comentário..." required></textarea>
+
+    <button type="submit" class="btn">Enviar</button>
+  </form>
+</section>
+</body>
+</html>
